@@ -1,0 +1,329 @@
+#main #app .button {
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 50px;
+  z-index: 1;
+}
+#main #app .button:hover i {
+  color: #03a9f4;
+}
+#main #app .button i {
+  color: #c8c8c8;
+  font-size: 1.25em;
+}
+#main #app.settings-toggled #settings-panel {
+  opacity: 1;
+  pointer-events: initial;
+  transform: scale(1);
+}
+#main #app .slide-up-fade-in {
+  animation: modal-slide-left-animation 0.5s ease;
+}
+#main #app .slide-down-fade-out {
+  animation: modal-slide-left-animation-out 0.5s ease;
+}
+#main #app #settings-panel {
+  background: linear-gradient(180deg, rgb(119,91,166) 0%, rgb(34, 15, 28) 100%);
+  border-radius: 10px;
+  font-size: 0px;
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+}
+#main #app #settings-panel #close-button, #main #app #settings-panel #options, #main #app #settings-panel #details-view {
+  font-size: medium;
+}
+#main #app #settings-panel #details-view-wrapper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  width: calc(100% - 250px);
+}
+#main #app #settings-panel #details-view-wrapper #details-view {
+  padding: 50px 30px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view #details-view-label h1 {
+  color: #dcdcdc;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0px;
+}
+#main #app #settings-panel #details-view-wrapper #details-view h2 {
+  padding-top: 5vh;
+  font-size: 1.1em;
+}
+
+@keyframes modal-slide-left-animation {
+  from {
+    left: -100%;
+  }
+  to {
+    left: .5%;
+  }
+}
+@keyframes modal-slide-left-animation-out {
+  from {
+    left: 3%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #main #app #close-button {
+    right: 0;
+  }
+  #main #app #settings-button {
+    right: -26px;
+    top: -37px;
+  }
+  #main #app .slide-up-fade-in {
+    animation: none;
+  }
+  #main #app .slide-down-fade-out {
+    animation: none;
+  }
+  #main #app #settings-panel {
+    height: 79vh;
+    left: -40vw;
+    top: -71vh;
+    width: 85vw;
+  }
+  #main #app #settings-panel #details-view-wrapper {
+    width: 100%;
+  }
+}
+
+.menu {
+  -webkit-filter: url("#shadowed-goo");
+          filter: url("#shadowed-goo");
+}
+
+.menu-item, .menu-open-button {
+  background: #efefef;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin-left: -40px;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: 55px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: -webkit-transform ease-out 200ms;
+  transition: transform ease-out 200ms;
+  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-item i {
+  color: #2f2442;
+}
+
+.menu-open {
+  display: none;
+}
+
+.hamburger {
+  width: 20px;
+  height: 3px;
+  background: #2f2442 !important;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  margin: -1.5px 0 0 -12.5px !important;
+  padding: 0 !important;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.hamburger-1 {
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  left: 12%;
+  width: 240px;
+  height: 90px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: white;
+  color: #00bcd4;
+}
+.menu-item:nth-child(3) {
+  transition-duration: 180ms;
+}
+.menu-item:nth-child(4) {
+  transition-duration: 180ms;
+}
+.menu-item:nth-child(5) {
+  transition-duration: 180ms;
+}
+.menu-item:nth-child(6) {
+  transition-duration: 180ms;
+}
+
+.menu-open-button {
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  left: 1vw;
+  transition-duration: 190ms;
+  -webkit-transform: translate3d(110px, 0, 0);
+          transform: translate3d(30px, 0, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  left: 1vw;
+  transition-duration: 290ms;
+  -webkit-transform: translate3d(220px, 0, 0);
+          transform: translate3d(87px, 0, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  left: 1vw;
+  transition-duration: 390ms;
+  -webkit-transform: translate3d(330px, 0, 0);
+          transform: translate3d(144px, 0, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  left: 1vw;
+  transition-duration: 490ms;
+  -webkit-transform: translate3d(440px, 0, 0);
+          transform: translate3d(202px, 0, 0);
+}
+
+@media (min-width: 1367px) and (max-width: 1440px){
+  .menu-item, .menu-open-button {
+    margin-left: -30px;
+    top: 10px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1){
+  #main #app #settings-panel #details-view-wrapper {
+    width: 100%;
+  }
+  .menu-item, .menu-open-button {
+    background: #efefef;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: -20px;
+    position: absolute;
+    top: 10px;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+        transition-duration: 200ms, 200ms;
+        transition-timing-function: ease-out, ease-out;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1366px){
+  #main #app #settings-panel #details-view-wrapper {
+    width: 100%;
+  }
+  .menu-item, .menu-open-button {
+    background: #efefef;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: -20px;
+    position: absolute;
+    top: 10px;
+    color: white;
+    text-align: center;
+    line-height: 55px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+        transition-duration: 200ms, 200ms;
+        transition-timing-function: ease-out, ease-out;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .menu-item, .menu-open-button {
+    margin-left: -18px;
+  }
+}
+@media (max-width: 500px) {
+.menu {
+    display: none;
+}
+  .menu-open:checked ~ .menu-item:nth-child(3) {
+    left: 3vw;
+  }
+  .menu-item, .menu-open-button {
+    margin-left: -25px;
+  }
+}

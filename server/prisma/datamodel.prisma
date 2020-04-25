@@ -1,0 +1,62 @@
+type Class @pgTable(name: "classes") {
+  id: Int! @unique
+  className: String @pgColumn(name: "class_name")
+  degreeTitleYearTerm: Term @pgColumn(name: "degree_title_year_term")
+  number: String
+  requirement: Requirement
+  sortorder: Int
+  subject: String
+  subsortorder: Int
+  url: String
+}
+
+type Degree @pgTable(name: "degrees") {
+  id: ID! @unique @pgColumn(name: "title")
+  description: String
+  heading: String
+  icon: String
+  pathurl: String
+  programTitle: Program @pgColumn(name: "program_title")
+  years: [Year]
+}
+
+type Meta @pgTable(name: "metas") {
+  id: ID! @unique @pgColumn(name: "title")
+  programs: [Program]
+  abbr: String
+}
+
+type Noncurricular @pgTable(name: "noncurriculars") {
+  id: ID! @unique @pgColumn(name: "title")
+  description: String
+  terms: [Term]
+}
+
+type Program @pgTable(name: "programs") {
+  id: ID! @unique @pgColumn(name: "title")
+  degrees: [Degree]
+  metaTitle: Meta @pgColumn(name: "meta_title")
+}
+
+type Requirement @pgTable(name: "requirements") {
+  id: ID! @unique @pgColumn(name: "title")
+  classes: [Class]
+  description: String
+}
+
+type Term @pgTable(name: "terms") {
+  id: ID! @unique @pgColumn(name: "degree_title_year_term")
+  classes: [Class]
+  degreeTitleYear: Year @pgColumn(name: "degree_title_year")
+  noncurricular: Noncurricular
+  term: Int
+  termName: String @pgColumn(name: "term_name")
+  yearTermTitle: String @pgColumn(name: "year_term_title")
+}
+
+type Year @pgTable(name: "years") {
+  id: ID! @unique @pgColumn(name: "degree_title_year")
+  degreeTitle: Degree @pgColumn(name: "degree_title")
+  terms: [Term]
+  year: Int
+}

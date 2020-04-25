@@ -1,0 +1,433 @@
+/* Header */
+header.masthead {
+  background-image: url(/_resources/images/id_img/coral.jpg);
+}
+@media (min-width: 768px) {
+#about {
+    margin-top: 0;
+}
+}
+
+/* Flip Cards (Two Tiles) */
+#flip .back p {
+    font-size: 0.9em;
+}
+.listing {
+    grid-template-columns: repeat(auto-fill,minmax(25%, .1fr));
+}
+#flip .listing {
+    display: flex;
+    margin: 0 27%;
+    justify-content: space-evenly;
+}
+#flip .listing li {
+    margin: 0 0 15px 0;
+}
+#flip img {
+    width: 65%;
+}
+@media screen and (max-width: 1920px) and (min-width: 1680px) {
+#flip .listing {
+    grid-template-columns: repeat(auto-fill,minmax(26%, .1fr));
+    grid-column-gap: 0;
+}
+#flip .listing {
+    display: flex;
+    margin: auto 30%;
+}
+#flip .listing li {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+#flip .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+    margin: 10px 0 20px 0;
+}
+#flip .turnarrow {
+    top: 240px;
+}
+@-moz-document url-prefix() {
+#flip .turnarrow {
+    top: 290px;
+    font-size: 4em;
+}
+}
+}
+@media screen and (max-width: 1679px) and (min-width: 1441px) {
+#flip .listing {
+    justify-content: space-evenly;
+    display: flex;
+}
+#flip .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+}
+#flip .turnarrow {
+    top: 240px;
+}
+}
+@media screen and (max-width: 1440px) and (min-width: 1369px) {
+#flip .listing li {
+    margin: 0 0 0 5%;
+}
+#flip .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+    margin: 0px 0 20px 0;;
+}
+#flip .listing {
+    display: flex;
+    margin: auto 24%;
+    justify-content: space-evenly;
+}
+#flip .osu img {
+    width: 300px;
+    top: 45px;
+}
+#flip .turnarrow {
+    top: 240px;
+}
+}
+@media screen and (max-width: 1366px) and (min-width: 1280px) {
+#flip {
+    padding-left: 0; 
+}
+#flip .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+    margin: 10px 0 30px 0;
+}
+#flip .listing {
+    display: flex;
+    margin: auto 25%;
+    justify-content: space-evenly;
+}
+#flip .listing li {
+    margin: 0 0px 0 5%;
+}
+#flip .osu img {
+    width: 300px;
+    top: 30px;
+}
+#flip .lbcclogo img {
+    top: 50px;
+}
+#flip .turnarrow {
+    top: 235px;
+}
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+#flip {
+    padding-left: 0; 
+}
+#flip .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+    margin: 10px 0 50px 0
+}
+#flip .listing {
+    display: flex;
+    justify-content: space-evenly;
+}
+#flip .listing li {
+    margin: 0 5%;
+}
+#flip .osu img {
+    width: 300px;
+    top: 20px;
+}
+#flip .lbcclogo img {
+    position: relative;
+    top: 70px;
+    width: 75%;
+}
+#flip .turnarrow {
+    top:235px;
+}
+}
+@media screen and (max-width:  1023px) and (min-width: 669px) {
+#flip .front h1 {
+    font-size: 1.4em;
+}
+#flip .listing {
+    display: flex;
+    justify-content: space-evenly;
+}
+#flip .flip-container, .front, .back {
+    width: 280px;
+    height: 280px;
+    margin: 10px 20px 40px 5px;
+}
+#flip .osu img {
+    width: 245px;
+    height: auto;
+    top: -15px;
+}
+#flip .turnarrow {
+    top: 220px;
+}
+}
+@media screen and (max-width:  668px) and (min-width: 415px) {
+#flip .front h1 {
+    font-size: 1.4em;
+}
+#flip .listing {
+    display: table;
+    margin: auto !important;
+}
+#flip .listing li {
+    margin: 20px auto;
+}
+#flip .flip-container, .front, .back {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px auto;
+}
+}
+@media only screen and  (max-width:  414px) {
+#flip .back p {
+    font-size: .9em;
+}
+#flip .front h1 {
+    font-size: 1.4em;
+}
+#flip .listing {
+	display: table;  
+    margin: auto;
+}
+#flip .listing li {
+    margin: 20px auto;
+}
+#flip img {
+    top: 0px;
+}
+}
+
+/* Faculty */
+#test .item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  box-sizing: border-box;
+  color: #fff;
+  -ms-grid-column: auto;
+      grid-column-start: auto;
+  -ms-grid-row: auto;
+      grid-row-start: auto;
+  color: #fff;
+  background: url("RGlaeser.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  counter-increment: item-counter;
+}
+#test .item:nth-of-type(2n) {
+  background-image: url("Scherr.jpg");
+}
+#test .item:nth-of-type(3n) {
+  background-image: url("MirandaDudzik.jpg");
+}
+#test .item:nth-of-type(4n) {
+  background-image: url("WarrenCoffeen1.jpg");
+}
+#test .item:nth-of-type(5n) {
+  background-image: url("DianaWheat.jpg");
+}
+#test .item:nth-of-type(6n) {
+  background-image: url("Rachel.jpg");
+}
+#test .item:nth-of-type(7n) {
+  background-image: url("Sistas.jpg");
+}
+#test .item:nth-of-type(9n) {
+  background-image: url("gregcoleman.jpg");
+}
+#test .item:nth-of-type(8n) {
+  background-image: url("BobRoss.jpg");
+}
+/* Faculty pix in 4-column */
+#test .grid {
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)) !important;
+}
+@media screen and (max-width: 1280px) and (min-width: 900px) {
+#test .grid {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+}
+}
+@media screen and (max-width:899px) and (min-width: 680px) {
+#test .grid {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+}
+@media screen and (max-width: 680px) {
+#test .grid {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+}
+
+
+/* Course Sequence */
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 0 4%;
+  padding: 0;
+}
+.cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem !important;
+}
+  .cards__item {
+    width: 33%;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+  .cards__item {
+    width: 50%;
+  }
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+  .cards__item {
+    width: 100%;
+  }
+  #tabs .tab__content p {
+    max-width: 90%;
+}
+#tabs .tabs {
+    width: 99.3%;
+    margin: 0 0 0 3px;
+}
+}
+@media (max-width: 767px) and (min-width: 320px) {
+.mobilemap {
+    display: -webkit-inline-box;
+    margin-top: 35px;
+}
+.modal-inset {
+    width: 100%;
+    height: 95%;
+}
+}
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+.card:hover .card__image {
+  -webkit-filter: contrast(100%);
+          filter: contrast(100%);
+}
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem !important;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -webkit-filter: contrast(70%);
+          filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+.card__image--1 {
+  background-image: url("bi101.jpg");
+}
+.card__image--2 {
+  background-image: url("bi102.jpg");
+}
+.card__image--3 {
+  background-image: url("bi103.jpg");
+}
+.card__image--4 {
+  background-image: url("bi211.jpg");
+}
+.card__image--5 {
+  background-image: url("bi212.jpg");
+}
+.card__image--6 {
+  background-image: url("bi213.jpg");
+}
+.card__image--7 {
+  background-image: url("bi231.jpg");
+}
+.card__image--8 {
+  background-image: url("bi232.jpg");
+}
+.card__image--9 {
+  background-image: url("bi233.jpg");
+}
+.card__title {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+    max-width: 100% !important;
+
+}
+.bioseq h1 {
+    padding-top: 20px !important;
+}

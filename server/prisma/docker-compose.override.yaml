@@ -1,0 +1,21 @@
+version: '3'
+services:
+  postgres:
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  pgweb:
+    image: sosedoff/pgweb
+    command: [
+      /usr/bin/pgweb, --bind=0.0.0.0, --ssl=disable, --db=maps,
+      --host=postgres, --user=admin, --pass=${PASSWORD}
+    ]
+    ports:
+    - "8081:8081"
+    environment:
+      VIRTUAL_HOST: pgweb.gp.docker
+    links:
+      - postgres
+
+volumes:
+  pg-data: {}
